@@ -32,6 +32,12 @@ gem 'simple_form'
 # Twitter
 gem 'twitter'
 
+# Geocoder
+gem 'geocoder'
+
+# Httparty
+gem 'httparty'
+
 group :development, :test do
   gem 'sqlite3'
 end

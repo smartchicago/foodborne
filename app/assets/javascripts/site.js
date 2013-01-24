@@ -2,7 +2,7 @@ $(function () {
   // Datepicker
   $(".datepicker").datepicker("option", {
       maxDate: "+0m +0w"
-    , dateFormat: "mm/dd/yy"
+    // , dateFormat: "mm/dd/yy"
   });
 
   // Geocomplete
