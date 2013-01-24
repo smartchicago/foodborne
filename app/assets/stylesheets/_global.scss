@@ -1,0 +1,15 @@
+$font-body: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;;
+$font-header: "Open Sans Condensed", "Helvetica Neue", Helvetica, sans-serif;;
+
+/* Font-size */
+@mixin font-size($size: 16, $line: $size * 1.6){
+  font-size: ($size * 1) + px;
+  font-size: ($size / 10) + rem;
+  line-height: ($line * 1) + px;
+  line-height: ($line / 10) + rem;
+}
+
+@mixin rgba-background($color, $opacity) {
+  background-color: $color;
+  background-color: rgba($color, $opacity);
+}

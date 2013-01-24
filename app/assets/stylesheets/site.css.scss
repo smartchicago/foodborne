@@ -1,0 +1,42 @@
+@import "global";
+@import "bootstrap";
+
+/* General Styles */
+body {
+  font-family: $font-body;
+
+  input, textarea {
+    font-family: $font-body;
+  }
+
+  abbr[title],
+  label { cursor: default; border: none; }
+}
+
+/* Header */
+#header {
+  padding: 40px 0 20px 0;
+  border-top: 5px solid black;
+  text-align: center;
+
+  a {
+    color: #333;
+    &:hover { text-decoration: none; }
+
+    &.logo {
+      font-family: $font-header;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #333;
+      @include font-size(36, 36);
+    }
+
+    &.scc {
+      color: #08C;
+      
+      img { width: 100px; }
+    }
+  }
+
+  .about { margin-top: 40px; }
+}

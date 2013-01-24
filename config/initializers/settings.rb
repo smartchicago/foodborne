@@ -1,0 +1,1 @@
+SETTINGS = YAML.load_file("#{Rails.root}/config/settings_#{Rails.env}.yml")

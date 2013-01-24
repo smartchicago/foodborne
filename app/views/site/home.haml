@@ -1,0 +1,21 @@
+.container
+  #submission.row
+    .span8.offset2
+      .well
+        = simple_form_for @submission, :html => { :class => 'form-horizontal' } do |s|
+          %h3 What happened?
+          = s.input :restaurant_name, :label => "What restaurant was it?", :input_html => { :class => "input-xlarge", :placeholder => "e.g.  Pete's Fish Shack" }
+          = s.input :restaurant_address, :label => "What was its address?", :input_html => { :class => "input-xlarge", :placeholder => "e.g.  70 E Lake St, Chicago, IL",  :"data-geo" => 'formatted_address' }
+          = s.input :description, :label => "What happened?", :as => :text, :input_html => { :rows => 6, :class => "input-xlarge" }
+          = s.input :date, :as => :string, :label => "When did it happen?", :input_html => { :class => "datepicker" }
+          %br
+          %h3 How can we reach you?
+          %p 
+            To let you know when the City responds, we need your email.
+            %b No spam, promise.
+          = s.input :first_name, :input_html => { :placeholder => "Joe" }
+          = s.input :last_name, :input_html => { :placeholder => "Citizen" }
+          = s.input :email, :input_html => { :placeholder => "joecitizen@example.com" }
+          = s.input :tweet_id, :as => :hidden, :value => @tweet_id
+          %br
+          = s.button :submit, :class => "btn-success btn-large", :value => "Submit your report"
