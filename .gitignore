@@ -15,7 +15,7 @@
 /tmp
 
 # Local settings
-/config/settings_development.yml
+/config/settings.yml
 
 # Misc
 .DS_Store

@@ -1,6 +1,0 @@
-311_api_key: <insert 311 api key here>
-twitter:
-  consumer_key: <insert consumer key here>
-  consumer_secret: <insert consumer secret here>
-  access_token: <insert access token here>
-  access_secret: <insert access secret here>
