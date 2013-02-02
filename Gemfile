@@ -26,6 +26,10 @@ gem 'geocoder'
 # Httparty
 gem 'httparty'
 
+# MongoDB
+gem 'mongo'
+gem 'bson_ext'
+
 group :development, :test do
   gem 'sqlite3'
 end
