@@ -21,7 +21,7 @@ class Submission < ActiveRecord::Base
       lat, long = Geocoder.coordinates("#{self.restaurant_address} , Chicago, IL") 
 
       HTTParty.post('http://test311api.cityofchicago.org/open311/v2/requests.json', :body => { 
-        :api_key => SETTINGS["311_api_key"],
+        :api_key => SETTINGS["OPEN_311_KEY"],
         :service_code => '4fd6e4ece750840569000019',
         :attribute => {
             :PLEASESE => 'FOODPOIS',
