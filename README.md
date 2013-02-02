@@ -12,4 +12,4 @@ Once you have obtained the necessary keys and credentials, copy the contents of 
 
 ### Production
 
-The live is hosted on [Heroku](http://heroku.com), and can be found at [http://foodborne.smartchicagoapps.org/](http://foodborne.smartchicagoapps.org/). All api keys are set and retrieved using [Heroku's config variables](https://devcenter.heroku.com/articles/config-vars).
+The live site is hosted on [Heroku](http://heroku.com), and can be found at [http://foodborne.smartchicagoapps.org/](http://foodborne.smartchicagoapps.org/). All api keys are set and retrieved using [Heroku's config variables](https://devcenter.heroku.com/articles/config-vars).
