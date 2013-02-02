@@ -47,6 +47,7 @@ GEM
     bourbon (3.0.1)
       sass (>= 3.2.0)
       thor
+    bson (1.7.0)
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -107,11 +108,19 @@ GEM
       activesupport (~> 3.1)
       polyamorous (~> 0.5.0)
     mime-types (1.19)
+    mongo (1.7.0)
+      bson (~> 1.7.0)
+    mongo_mapper (0.12.0)
+      activemodel (~> 3.0)
+      activesupport (~> 3.0)
+      plucky (~> 0.5.2)
     multi_json (1.5.0)
     multi_xml (0.5.2)
     multipart-post (1.1.5)
     orm_adapter (0.4.0)
     pg (0.14.1)
+    plucky (0.5.2)
+      mongo (~> 1.5)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -189,6 +198,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   meta_search (>= 1.1.0.pre)
+  mongo_mapper
   pg
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)

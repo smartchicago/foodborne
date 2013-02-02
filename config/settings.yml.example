@@ -2,9 +2,20 @@
 # Copy the contents of file into a new file named "settings.yml",
 # and fill in your Open 311 and Twitter API keys
 
+# Chicago Open 311
+# http://dev.cityofchicago.org/docs/api
 OPEN_311_KEY: <insert 311 api key here>
 
+# Twitter
+# https://dev.twitter.com/
 TWITTER_CONSUMER_KEY: <insert consumer key here>
 TWITTER_CONSUMER_SECRET: <insert consumer secret here>
 TWITTER_ACCESS_TOKEN: <insert access token here>
 TWITTER_ACCESS_SECRET: <insert access secret here>
+
+# Tweet Classifier
+# Contact Smart Chicago Collaborative for access
+CLASSIFIER_HOST: <insert classifier host here>
+CLASSIFIER_PORT: <insert classifier port here>
+CLASSIFIER_USERNAME: <insert classifier username here>
+CLASSIFIER_PASSWORD: <insert classifier password here>
