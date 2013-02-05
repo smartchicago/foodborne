@@ -17,3 +17,6 @@ TWITTER_ACCESS_SECRET: <insert access secret here>
 # Contact Smart Chicago Collaborative for access
 CLASSIFIER_URI: <insert classifier host here. e.g. mongodb://username:password@host1:port>
 CLASSIFIER_COLLECTION: <insert collection here>
+
+# Google Analytics
+GOOGLE_ANALYTICS: <insert google analytics id here>
