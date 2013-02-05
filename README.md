@@ -13,3 +13,19 @@ Once you have obtained the necessary keys and credentials, copy the contents of 
 ### Production
 
 The live site is hosted on [Heroku](http://heroku.com), and can be found at [http://foodborne.smartchicagoapps.org/](http://foodborne.smartchicagoapps.org/). All api keys are set and retrieved using [Heroku's config variables](https://devcenter.heroku.com/articles/config-vars).
+
+## Fetching Tweets
+
+There are two, namespaced rake tasks for fetching tweets:
+
+### Twitter
+
+Pulls from a dummy [@foodpoisonuser Twitter account](https://twitter.com/foodpoisonuser).
+
+    rake fetch:twitter
+
+### Classifier
+
+Pulls from the MongoDB classifier. As mentioned above, you will need credentials provided by the Smart Chicago Collaborative.
+
+    rake fetch:classifier
