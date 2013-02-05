@@ -15,7 +15,5 @@ TWITTER_ACCESS_SECRET: <insert access secret here>
 
 # Tweet Classifier
 # Contact Smart Chicago Collaborative for access
-CLASSIFIER_HOST: <insert classifier host here>
-CLASSIFIER_PORT: <insert classifier port here>
-CLASSIFIER_USERNAME: <insert classifier username here>
-CLASSIFIER_PASSWORD: <insert classifier password here>
+CLASSIFIER_URI: <insert classifier host here. e.g. mongodb://username:password@host1:port>
+CLASSIFIER_COLLECTION: <insert collection here>
