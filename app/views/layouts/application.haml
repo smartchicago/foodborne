@@ -8,7 +8,7 @@
     /[if lt IE 9]
       = javascript_include_tag "html5shiv"
     = csrf_meta_tags
-  %body
+  %body{:class => "#{action_name}"}
     %header#header
       .container
         .span12
