@@ -37,14 +37,19 @@ body {
       img { width: 100px; }
     }
   }
+}
 
-  .about { margin-top: 40px; }
+.about { 
+  margin-bottom: 40px; 
+  text-align: left;
+
+  p { margin-bottom: 20px; }
 }
 
 /* Thanks */
 body.thanks {
   .well {
     h1 { margin-bottom: 20px; }
-    p { line-height: 1em; }
+    p { line-height: 1em; margin-bottom: 20px; }
   }
 }
