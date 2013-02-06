@@ -18,9 +18,7 @@
             %a.scc{:href => "http://www.smartchicagocollaborative.org/"}
               Sponsored by the 
               = image_tag "scc_logo.png", :alt => "Smart Chicago Collaborative"
-          %p.about
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus quam eu lectus congue pharetra. Sed diam orci, laoreet non pellentesque a, luctus suscipit tellus. Suspendisse lectus odio, consequat sed egestas a, luctus luctus ante. Aliquam tincidunt, magna vel consectetur hendrerit, augue eros tincidunt mauris
-
+              
     = yield
     %script{ :type => 'text/javascript', :src => 'http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places' }
     = javascript_include_tag "application"
