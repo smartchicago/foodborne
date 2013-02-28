@@ -8,6 +8,12 @@ Foodpoison::Application.routes.draw do
   match "thanks", :to => "site#thanks", :as => :thanks
   match ":tweet_id", :to => "site#home"
 
+  # RSS
+  match 'feed/tweets', 
+        :to => 'feed#tweets',
+        :as => :tweet,
+        :defaults => { :format => 'atom' }
+
   # Default route
   root :to => 'site#home'
 end
