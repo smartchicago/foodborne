@@ -1,7 +1,7 @@
 require "pp"
 
 class Tweet < ActiveRecord::Base
-  attr_accessible :tweet_id, :screen_name, :text, :reply
+  attr_accessible :tweet_id, :screen_name, :text, :reply, :created_at
   validates :tweet_id, :uniqueness => true
   after_save :send_reply
 
