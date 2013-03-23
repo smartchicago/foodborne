@@ -34,6 +34,8 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'shoulda-context', '~> 1.0.2'
+  gem 'shoulda-matchers', '~> 1.4.2'
 end
 
 group :test do
