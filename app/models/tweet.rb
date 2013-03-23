@@ -1,6 +1,6 @@
-require "pp"
-
 class Tweet < ActiveRecord::Base
+  default_scope order('created_at DESC')
+  
   attr_accessible :tweet_id, :screen_name, :text, :reply, :created_at
   validates :tweet_id, :uniqueness => true
   after_save :send_reply
