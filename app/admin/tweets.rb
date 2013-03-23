@@ -8,7 +8,7 @@ ActiveAdmin.register Tweet, {:sort_order => "created_at_desc"} do
     column :screen_name do |tweet|
       "@#{tweet.screen_name}"
     end
-    column :created_at
+    column :tweet_created_at
     column "Replied?" do |tweet|
       status_tag tweet.reply.blank? ? "No" : "Yes",  tweet.reply.blank? ? :error : :ok
     end

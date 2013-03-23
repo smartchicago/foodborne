@@ -17,16 +17,17 @@ namespace :fetch do
     @coll = @db.collection(SETTINGS["CLASSIFIER_COLLECTION"])
 
     # Find the most recent tweet in our database
-    @last_created_at = Tweet.first.nil? ? "1871-10-08" : Tweet.first["created_at"].utc
+    @last_id = Tweet.first.nil? ? "0" : Tweet.first["tweet_id"]
 
     # Fetch tweets that are newer than the most recent we have in our app,
     # and create new records for them.
-    @coll.find(:created_at => {"$gt" => @last_created_at}).each do |tweet|
+    # Note: It's easiest for us to search by tweet_id order
+    @coll.find("id_str" => {"$gt" => @last_id}).each do |tweet|
       Tweet.create(
         :tweet_id => tweet["id_str"],
         :screen_name => tweet["from_user"],
         :text => tweet["text"],
-        :created_at => tweet["created_at"]
+        :tweet_created_at => tweet["created_at"]
       )
     end
   end
