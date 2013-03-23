@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130110160228) do
+ActiveRecord::Schema.define(:version => 20130323134112) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -63,10 +63,11 @@ ActiveRecord::Schema.define(:version => 20130110160228) do
   create_table "tweets", :force => true do |t|
     t.string   "tweet_id"
     t.text     "text"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "screen_name"
     t.text     "reply"
+    t.string   "tweet_created_at"
   end
 
 end
