@@ -1,8 +1,20 @@
 <%= semantic_form_for [:admin, @tweet] do |f| %>
-  <%= f.inputs :name => "Details" do %>
+  <%= f.inputs :name => "Tweet" do %>
     <%= f.input :screen_name, :input_html => { :readonly => true } %>
     <%= f.input :text, :input_html => { :readonly => true } %>
+  <% end %>
+  <%= f.inputs :name => "Response" do %>
+    <li>
+      <label>Auto-fill replies</label>
+      <select class="example-replies">
+        <option></option>
+        <%= Tweet::EXAMPLE_REPLIES.each do |reply| -%>
+        <option><%= reply %></option>
+        <% end %>
+      </select>
+    </li>
     <%= f.input :reply, :input_html => { :maxlength => 140 - (@tweet.screen_name.length + 1) } %>
+    <li class="remaining_characters">Remaining characters: <span></span></li>
     <%= f.input :tweet_id, :as => "hidden" %>
   <% end %>
   <%= f.actions do %>
