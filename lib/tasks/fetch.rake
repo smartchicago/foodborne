@@ -26,7 +26,7 @@ namespace :fetch do
       Tweet.create(
         :tweet_id => tweet["id_str"],
         :screen_name => tweet["from_user"],
-        :text => tweet["text"].force_encoding('iso-8859-1').encode!('utf-8')
+        :text => tweet["text"].force_encoding('iso-8859-1').encode!('utf-8'),
         :tweet_created_at => tweet["created_at"]
       )
     end
