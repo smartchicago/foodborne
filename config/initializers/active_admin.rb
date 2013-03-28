@@ -1,8 +1,6 @@
 #  Hack the footer to include Google Analytics
 class FoodborneFooter < ActiveAdmin::Component
   def build
-    # super(id: "footer")
-    # para "hello world."
     script %Q@
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', '#{SETTINGS["GOOGLE_ANALYTICS"]}']);
