@@ -1,3 +1,21 @@
+#  Hack the footer to include Google Analytics
+class FoodborneFooter < ActiveAdmin::Component
+  def build
+    # super(id: "footer")
+    # para "hello world."
+    script %Q@
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '#{SETTINGS["GOOGLE_ANALYTICS"]}']);
+            _gaq.push(['_trackPageview']);
+    
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();@.html_safe , :type => 'text/javascript'
+  end
+end
+
 ActiveAdmin.setup do |config|
 
   # == Site Title
@@ -149,6 +167,9 @@ ActiveAdmin.setup do |config|
   #
   # Set the CSV builder options (default is {})
   # config.csv_options = {}
+  
+  # pull in the custom footer
+  config.view_factory.footer = FoodborneFooter
 end
 
 module ActiveAdmin::ViewHelpers
