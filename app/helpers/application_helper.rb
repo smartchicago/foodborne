@@ -2,7 +2,7 @@ module ApplicationHelper
   def ga_trackable(category, action, label, options = {})
     # return data attributes for Google Analytics tracking
 
-    classes = options.delete(:class)
+    classes = options.delete(:class) || ""
     classes += " ga-trackable"
     { 
       :'data-tracking-category' => category, :'data-tracking-action' => action, 
