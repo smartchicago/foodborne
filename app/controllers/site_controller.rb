@@ -1,5 +1,3 @@
-require "pp"
-
 class SiteController < ApplicationController
   def home
     @submission = Submission.new(:tweet_id => params[:tweet_id])
@@ -8,12 +6,9 @@ class SiteController < ApplicationController
   def submission
     @submission = Submission.new(params[:submission])
     if @submission.save
-      redirect_to :thanks
+      redirect_to page_path("thanks")
     else
       render :action => "home"
     end
-  end
-
-  def thanks
   end
 end

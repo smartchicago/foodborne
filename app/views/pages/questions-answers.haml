@@ -1,0 +1,29 @@
+.container
+  #submission.row
+    .span12
+      .qa.copy
+        %h2 Questions + Answers
+
+        %p
+          %br
+          %strong Who are you and why did you @reply me on Twitter?
+          This is a project of the #{link_to "Smart Chicago Collaborative", "http://www.smartchicagocollaborative.org/"}, a civic organization devoted to improving lives in Chicago through technology. There is a core set of people (currently #{link_to "Raed Mansour", "http://raedmansour.com/"}, #{link_to "Dr. Jason Miller", "https://twitter.com/JayMillerMD"}, and #{link_to "Daniel X. O’Neil", "http://www.derivativeworks.com/"}) who do the actual tweeting. 
+
+        %p
+          %strong What happens after I complete this form?
+          You should get an email from the City letting you know that the information was received as well as a link to the item on the #{link_to "City’s 311 Service Tracker tool", "http://servicetracker.cityofchicago.org/"}. The email comes from “City Services” (#{link_to "CityServices@cityofchicago.org", "mailto:CityServices@cityofchicago.org"}). The subject line will be something like, “ 13-00210540 Confirmation Email”. The long number is your “SR Number”-- the tracking number for the service request assigned by the City. All of these numbers start with the year (hence the “13” followed by a roughly sequential number in the City’s 311 system.There will be a link in this email (#{link_to "example", "http://servicetracker.cityofchicago.org/requests/13-00210540"}) that goes directly to the City’s Service Tracker website. This is your key to finding out what comes of the service request.
+
+        %p
+          %strong I filled out your form. What’s the current status?
+          You should have received an email from the City after you completed the form. #{link_to "Here’s more info on the 311 process", "http://www.cityofchicago.org/content/dam/city/depts/311/general/NewOpen311InformationChart.pdf"}. In that email is a link to their record of your complaint on the #{link_to "City’s 311 Service Tracker tool", "http://servicetracker.cityofchicago.org/"}. If you didn’t get the email, check your Spam folder. Otherwise, contact the City. Keep in mind that our only role in this process is to submit your info using the #{link_to "City’s Open311 API Documentation", "http://dev.cityofchicago.org/docs/api"}. We are not involved in any other way.
+
+        %p
+          %strong You made a mistake. (I’m not in Chicago, I’m not sick, I don’t want to hear from you, etc.) Can you fix it?
+          Yes (and sorry about that). Let us know via email (#{link_to "info@smartchicagocollaborative.org", "mailto:info@smartchicagocollaborative.org"}) or on Twitter (#{link_to "@foodbornechi", "https://twitter.com/foodbornechi"}) and let us know how we muffed up. We’ll take appropriate action.
+
+        %p
+          %strong I’m interested in the technology behind this thing. Can you tell me more?
+          The source code and issues tracker for this website can be found on #{link_to "Github", "https://github.com/smartchicago/foodborne"}.
+
+        %p
+          = link_to "&laquo; Return to the home page".html_safe, "/"

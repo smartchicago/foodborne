@@ -39,11 +39,27 @@ body {
   }
 }
 
-.about { 
+.copy { 
   margin-bottom: 40px; 
   text-align: left;
 
   p { margin-bottom: 20px; }
+
+  /* Questions and Answers */
+  &.qa {
+    strong { display: block; margin-bottom: 10px; }
+    p {
+      border-bottom: 1px dotted #ccc;
+      padding-bottom: 20px;
+
+      &:last-of-type { border: none; }
+    }
+  }
+
+  /* About */
+  &.about {
+    ul li { margin-bottom: 10px; }
+  }
 }
 
 /* Thanks */
