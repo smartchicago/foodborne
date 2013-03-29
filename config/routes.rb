@@ -5,7 +5,6 @@ Foodpoison::Application.routes.draw do
 
   # Submissions
   match "submissions", :to => "site#submission", :as => :submissions
-  match "thanks", :to => "site#thanks", :as => :thanks
   match ":tweet_id", :to => "site#home"
 
   # RSS

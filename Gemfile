@@ -30,6 +30,9 @@ gem 'httparty'
 gem 'mongo'
 gem 'bson_ext'
 
+# High Voltage, static pages
+gem 'high_voltage'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'

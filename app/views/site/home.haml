@@ -1,13 +1,16 @@
 .container
   #submission.row
     .span12
-      .about
-        %p The City of Chicago has a robust and simple complaint submission system. From graffiti removal requests to abandoned car reporting, residents can notify the City either online or by calling 311.
-        %p The same holds true for submitting restaurant complaints to the CDPH when food poisoning is suspected. A complaint ticket is generated, either by calling 311 or via the internet, and Food Protection Services follows up with the resident. If warranted, an inspection team is dispatched to the restaurant in question.
-        %p The CDPH Food Protection Services fields approximately 5800 complaints per year, leading to 174 restaurant investigations for suspected food poisoning per year. The CDC estimates, however, that approximately 45% of foodborne illness goes unreported. The average resident may be unaware that they can file a complaint, much less how to file a complaint.
-        %p As a high profile health department that prides itself on accessibility and connectivity, the CDPH has resolved to use every tool at its disposal to ensure the health of the public. By using Twitter to identify, isolate, and investigate additional food poisoning cases, we are taking a 21st century approach to solve an issue that affects each individual in Chicago: food safety.
-        %p Using sophisticated computer algorithms, it is now possibleto isolate Twitter conversations based on location and content. For our purposes, that means looking strictly for Tweets mentioning “food poisoning” originating inChicago. The authors of legitimate Tweets are then invited to fill out a web form that gathers pertinent information related to their suspected food poisoning incident. A complaint ticket is generated and forwarded to Food Protection Services, which responds accordingly.
-        %p The applications of this type of technology are limited only by our imaginations. We are excited to implement this novel approach to food safety to the residents of Chicago.
+      .copy
+        %p If you think you have food poisoning in Chicago, please complete this form. The info will be sent to the Chicago Department of Public Health so they can take any necessary action.
+
+        %p Did we @reply you on Twitter? Here’s why.
+
+        %p 
+          We use computers & code to search Twitter for tweets related to food poisoning in Chicago. We do as much as we can to automatically zero-in on the tweets we think are really about a possible food poisoning case and really coming from Chicago. Then real humans review the tweets and @reply back to people with a link back to this page. #{link_to "More detail here.", page_path("about")}
+          
+        %p
+          = link_to "Questions? We’ve got answers.", page_path("questions-answers")
 
     .span8.offset2
       .well

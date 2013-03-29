@@ -1,0 +1,58 @@
+.container
+  #submission.row
+    .span12
+      .about.copy
+        %h2#about About
+        %p 
+          This is a project of the #{link_to "Smart Chicago Collaborative", "http://www.smartchicagocollaborative.org/"}, a civic organization devoted to improving lives in Chicago through technology. We’ve worked with a #{link_to "whole host of partners inside and outside of government", "#genesis"} to pull together this simple interface to get your information directly to #{link_to "City of Chicago Department of Public Health (CDPH)", "http://www.cityofchicago.org/city/en/depts/cdph.html"} so it can be of use to everyone.
+
+        %p Foodborne illness is a public health issue. If you are feeling sick and you think it’s from eating in a public place, it’s a good thing to alert others about the possible danger.
+        
+        %p The CDPH Food Protection Services fields approximately 5800 complaints per year, leading to 174 restaurant investigations for suspected food poisoning per year. The CDC estimates, however, that approximately 45% of foodborne illness goes unreported. The average resident may be unaware that they can file a complaint, much less how to file a complaint.
+
+        %p The City of Chicago has a robust and simple complaint submission system-- the 311 system. Restaurant complaints are routed to the CDPH when food poisoning is suspected. When a resident makes a restaurant complaint, the City passes it on to the CDPH Food Protection Services follows up with the resident. If warranted, an inspection team is dispatched to the restaurant in question.
+
+        %p Once you complete this form, the City of Chicago takes it from there. We use the City’s Open311 system to directly submit your information. We do not maintain a copy of your complaint and have nothing to do with the status of the issue. We’re just some people using technology to help improve communication between Chicago residents and the government that serves them.
+
+        %h2#genesis Genesis
+
+        %p
+          This project has many contributors doing a myriad of positive things that fit together into this people-focused timeline:
+
+        %p
+          %ul
+            %li
+              #{link_to "John Tolva", "http://www.ascentstage.com/"}, #{link_to "Chief Technology Officer, City of Chicago", "https://twitter.com/ChicagoCTO"}, and #{link_to "Daniel X. O’Neil", "http://www.derivativeworks.com/"}, #{link_to "Executive Director of Smart Chicago Collaborative", "http://www.smartchicagocollaborative.org/sample-page/staff-consultants/daniel-x-oneil-executive-director-2/"}, for bringing #{link_to "Code for America to Chicago", "http://codeforamerica.org/2012-partners/chicago/"} to do a #{link_to "project centered on Open 311", "http://www.smartchicagocollaborative.org/the-launch-of-open311-in-chicago/"}
+            %li
+              Brett Goldstein, #{link_to "Chief Data Officer", "https://twitter.com/ChicagoCDO"} and #{link_to "Chief Information Officer, City of Chicago", "https://www.cityofchicago.org/city/en/depts/doit/auto_generated/doit_leadership.html"}, for starting the Twitter Classification Group and fostering a culture of analytics in the developer community
+            %li
+              #{link_to "Q Ethan McCallum", "http://www.exmachinatech.net/01/"}, for creating an early system that polls Twitter for food poisoning-related tweets after classification and helping to conceptualize the system workflow
+            %li
+              #{link_to "Joe Olson", "http://tracklytics.com/"}, for writing the code that collects tweets and stores them using #{link_to "Mongo DB", "http://www.mongodb.org/"} and #{link_to "node.js", "http://nodejs.org/"}
+            %li
+              #{link_to "Cory Nissen", "https://twitter.com/corynissen"}, for writing the code that classifies tweets and hand-coding thousands of them
+            %li
+              #{link_to "Ryan Briones", "http://ryanbriones.com/"}, a part of the Twitter Classification Group and then as #{link_to "Director at the Department of Innovation and Technology", "http://www.linkedin.com/in/ryanbriones"} for working the API and maintaining all of the enterprise technology systems that actually make this thing work
+            %li
+              #{link_to "Dr. Bechara Choucair", "https://twitter.com/choucair"}, #{link_to "Commissioner of the Department of Public Health", "http://www.cityofchicago.org/city/en/depts/cdph/auto_generated/cdph_leadership.html"} for his leadership and for first monitoring Twitter for the phrase “food poisoning” in Chicago in HootSuite. This was the genesis of the project, as first specced out here
+            %li
+              #{link_to "Juan-Pablo Velez", "https://jpvelez.contently.com/"}, for #{link_to "designing the first interface", "http://www.flickr.com/photos/juggernautco/8498088761/in/photostream"} and integrating the #{link_to "Google Places API", "https://developers.google.com/places/documentation/"} (initially in the context of this #{link_to "Developer Challenge", "https://developers.google.com/places/challenge/"}) as well as testing the system in the Open 311 API
+            %li
+              #{link_to "Scott Robbin", "http://srobbin.com/"}, for developing the entire system, including the admin tool
+            %li
+              Gerrin Butler, #{link_to "Director of Food Protection for CDPH", "http://www.cityofchicago.org/city/en/depts/cdph/provdrs/environ_health/svcs/food_protection_program.html"}, for providing information on the food protection process and sharing her passion for public health
+            %li
+              #{link_to "Raed Mansour", "http://raedmansour.com/"}, for writing our admin manual and providing thought leadership on how to communicate with people on Twitter about their health
+            %li
+              #{link_to "Dr. Jason Miller", "https://twitter.com/JayMillerMD"}, for writing the intro text and form prompts so that the info we collect is useful to health safety professionals. Another little-known fact: he is the conceptual genius behind the #{link_to "City’s Flu Shot app", "http://flushots.311services.org/"}
+            %li
+              #{link_to "Chris Gansen", "http://www.chrisgansen.com/"}, for setting up our server infrastructure and analytics system
+
+        %p
+          Thanks, most of all, to the #{link_to "CDPH Food Protection Division", "http://www.cityofchicago.org/city/en/depts/cdph/provdrs/environ_health/svcs/food_protection_program.html"}, for actually doing the inspections that help keep us safe. All the tweets in the world can’t put a thermometer in a dairy case.
+
+        %p 
+          Thanks for that!
+
+        %p
+          = link_to "&laquo; Return to the home page".html_safe, "/"
