@@ -31,4 +31,4 @@
           = s.input :email, :input_html => { :placeholder => "joecitizen@example.com" }
           = s.input :tweet_id, :as => :hidden, :value => @tweet_id
           %br
-          = s.button :submit, :class => "btn-success btn-large", :value => "Submit your report"
+          = s.button :submit, ga_trackable('Submission', 'Create', 'Public Submission', :class => "btn-success btn-large", :value => "Submit your report")

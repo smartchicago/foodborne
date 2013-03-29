@@ -19,7 +19,7 @@ class Tweet < ActiveRecord::Base
   private
     def send_reply
       if self.reply_changed? and !self.reply.blank?
-        Twitter.update("@#{self.screen_name} #{self.reply} http://foodborne.smartchicagoapps.org/#{self.tweet_id}", :in_reply_to_status_id => self.tweet_id)
+        Twitter.update("@#{self.screen_name} #{self.reply} http://foodborne.smartchicagoapps.org/#{self.tweet_id}?utm_source=twitter&utm_medium=tweet&utm_content=#{self.tweet_id}&utm_campaign=foodborne", :in_reply_to_status_id => self.tweet_id)
       end
     end
 end
