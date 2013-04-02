@@ -7,17 +7,47 @@ body {
 
   input, textarea {
     font-family: $font-body;
+    max-width: 95%;
   }
 
   abbr[title],
   label { cursor: default; border: none; }
 }
 
+#nav {
+  text-align: left;
+  background: #333;
+  margin-bottom: 40px;
+
+  ul { 
+    list-style: none; 
+    margin: 0;
+
+    li {
+      float: left;
+
+      a { 
+        display: block;
+        color: white;
+        padding: 5px 20px;
+
+        &:hover { background: #444; }
+      }
+    }
+  }
+}
+
 /* Header */
 #header {
-  padding: 40px 0 20px 0;
-  border-top: 5px solid black;
+  padding: 0 0 20px 0;
   text-align: center;
+
+  .subheader { 
+    color: #666;
+    @include font-size(18, 18);
+  }
+
+  .logo-wrap { margin-bottom: 0; }
 
   a {
     color: #333;

@@ -1,6 +1,6 @@
 .container
   #submission.row
-    .span12
+    .span5
       .copy
         %p If you think you have food poisoning in Chicago, please complete this form. The info will be sent to the Chicago Department of Public Health so they can take any necessary action.
 
@@ -12,7 +12,7 @@
         %p
           = link_to "Questions? We’ve got answers.", page_path("questions-answers")
 
-    .span8.offset2
+    .span7
       .well
         = simple_form_for @submission, :html => { :class => 'form-horizontal' } do |s|
           %h3 What happened?
