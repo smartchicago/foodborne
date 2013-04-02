@@ -2,8 +2,9 @@
 %html
   %head
     %title
-      Food Borne - #{content_for?(:page_title) ? yield(:page_title) : "Report incidents of food poisoning in Chicago"}
+      Foodborne Chicago - #{content_for?(:page_title) ? yield(:page_title) : "Report incidents of food poisoning in Chicago"}
     %meta{ :charset => 'utf-8' }
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
     = stylesheet_link_tag "//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Open+Sans+Condensed:700", :media => "all"
     = stylesheet_link_tag "application", :media => "all"
     /[if lt IE 9]
@@ -11,13 +12,24 @@
     = csrf_meta_tags
   %body{:class => "#{action_name}"}
     %header#header
+      %nav#nav.clearfix
+        .container
+          .row
+            %ul.span12
+              %li= link_to "Home", "/"
+              %li= link_to "About", page_path("about")
+              %li= link_to "Q&A", page_path("questions-answers")
+
       .container
         .span12
-          %p
-            %a.logo{:href => "/"} Report Food Poisoning
+          %p.logo-wrap
+            %a.logo{:href => "/"} 
+              = image_tag "logo.png", :width => 70
+              Foodborne Chicago
+          %p.subheader Report food poisoning
           %p
             %a.scc{:href => "http://www.smartchicagocollaborative.org/"}
-              Sponsored by the 
+              A project of the 
               = image_tag "scc_logo.png", :alt => "Smart Chicago Collaborative"
               
     = yield
