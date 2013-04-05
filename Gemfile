@@ -33,6 +33,9 @@ gem 'bson_ext'
 # High Voltage, static pages
 gem 'high_voltage'
 
+# use unicorn as app server
+gem 'unicorn'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
@@ -50,7 +53,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'thin'
 end
 
 # Gems used only for assets and not required
