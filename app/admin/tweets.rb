@@ -1,5 +1,5 @@
 ActiveAdmin.register Tweet, {:sort_order => "created_at_desc"} do
-  actions :all, :except => :new
+  actions :all, :except => [:new, :destroy]
 
   # Index
   index do
