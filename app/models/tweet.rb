@@ -1,7 +1,7 @@
 class Tweet < ActiveRecord::Base
   default_scope order('created_at DESC')
   
-  attr_accessible :tweet_id, :tweet_created_at, :screen_name, :text, :reply
+  attr_accessible :tweet_id, :tweet_created_at, :screen_name, :text, :reply, :archived
   validates :tweet_id, :uniqueness => true
   after_save :send_reply
 

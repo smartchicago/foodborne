@@ -6,7 +6,7 @@ ActiveAdmin.register Tweet, {:sort_order => "created_at_desc"} do
     selectable_column
     column :text
     column :screen_name do |tweet|
-      "@#{tweet.screen_name}"
+      link_to "@#{tweet.screen_name}", "https://twitter.com/#{tweet.screen_name}", :target => "_blank"
     end
     column :tweet_created_at
     column "Replied?" do |tweet|
@@ -24,7 +24,20 @@ ActiveAdmin.register Tweet, {:sort_order => "created_at_desc"} do
 
   # Scope
   scope :unread, :default => true do |tweets|
-    tweets.where(:reply => nil)
+    tweets.where(:reply => nil, :archived => false)
+  end
+  scope :replied do |tweets|
+    tweets.where("reply <> ''")
   end
   scope :all
+
+  # Batch Actions
+  batch_action :archive do |selection|
+    Tweet.find(selection).each do |tweet|
+      tweet.archived = true
+      tweet.save
+    end
+    flash[:notice] = 'The selected tweets are now archived.'
+    redirect_to :back
+  end
 end
