@@ -8,7 +8,9 @@ ActiveAdmin.register Tweet, {:sort_order => "created_at_desc"} do
     column :screen_name do |tweet|
       link_to "@#{tweet.screen_name}", "https://twitter.com/#{tweet.screen_name}", :target => "_blank"
     end
-    column :tweet_created_at
+    column :tweet_created_at do |tweet|
+      tweet.created_at.in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y %l:%M%p")
+    end
     column "Replied?" do |tweet|
       status_tag tweet.reply.blank? ? "No" : "Yes",  tweet.reply.blank? ? :error : :ok
     end
