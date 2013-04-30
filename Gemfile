@@ -36,6 +36,9 @@ gem 'high_voltage'
 # use unicorn as app server
 gem 'unicorn'
 
+# New relic -- application monitoring
+gem 'newrelic_rpm'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
