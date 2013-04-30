@@ -154,6 +154,7 @@ GEM
     multi_json (1.7.2)
     multi_xml (0.5.2)
     multipart-post (1.1.5)
+    newrelic_rpm (3.5.7.59)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
     pg (0.14.1)
@@ -277,6 +278,7 @@ DEPENDENCIES
   launchy
   meta_search (>= 1.1.0.pre)
   mongo
+  newrelic_rpm
   pg
   rails (= 3.2.13)
   rspec-rails
