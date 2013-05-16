@@ -22,7 +22,7 @@ namespace :fetch do
     # Fetch tweets that are newer than the most recent we have in our app,
     # and create new records for them.
     # Note: It's easiest for us to search by tweet_id order
-    @coll.find("id_str" => {"$gt" => @last_id}).each do |tweet|
+    @coll.find("id_str" => {"$gt" => @last_id}, "rClass" => {"$ne" => "not a food poisoning tweet\n"}).each do |tweet|
       Tweet.create(
         :tweet_id => tweet["id_str"],
         :screen_name => tweet["from_user"],
