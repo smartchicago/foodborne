@@ -16,6 +16,10 @@
       .well
         = simple_form_for @submission, :html => { :class => 'form-horizontal' } do |s|
           %h3 What happened?
+          - if @submission.errors.any?
+            .alert.alert-error
+              %strong  Error:
+              Please fill out all of the required fields below.
           %p
             Please be as descriptive as possible, letting us know what food items you consumed, what time of day, what was your first symptom, and for how long you were sick.
           %br
@@ -31,6 +35,7 @@
           = s.input :first_name, :input_html => { :placeholder => "Joe" }
           = s.input :last_name, :input_html => { :placeholder => "Citizen" }
           = s.input :email, :input_html => { :placeholder => "joecitizen@example.com" }
+          = s.input :phone, :input_html => { :placeholder => "(773) 555-1212" }
           = s.input :tweet_id, :as => :hidden, :value => @tweet_id
           %br
           = s.button :submit, ga_trackable('Submission', 'Create', 'Public Submission', :class => "btn-success btn-large", :value => "Submit your report")

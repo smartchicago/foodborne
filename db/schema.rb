@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409140556) do
+ActiveRecord::Schema.define(:version => 20131117212726) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20130409140556) do
     t.string   "tweet_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.string   "phone"
   end
 
   create_table "tweets", :force => true do |t|

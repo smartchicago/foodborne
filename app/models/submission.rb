@@ -4,7 +4,7 @@ require "httparty"
 class Submission < ActiveRecord::Base
   # Attributes
   attr_accessible :restaurant_name, :restaurant_address, :description, :date,
-                  :first_name, :last_name, :twitter_handle, :email, :tweet_id
+                  :first_name, :last_name, :twitter_handle, :email, :phone, :tweet_id
 
   # Validation
   validates :restaurant_name, :restaurant_address, :description, :date,
@@ -34,7 +34,8 @@ class Submission < ActiveRecord::Base
         :long => long, 
         :first_name => self.first_name,
         :last_name => self.last_name,
-        :email => self.email
+        :email => self.email,
+        :phone => self.phone
       })
     end
 end
