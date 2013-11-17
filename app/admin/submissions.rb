@@ -16,6 +16,7 @@ ActiveAdmin.register Submission do
       "#{s.first_name} #{s.last_name}"
     end
     column :email
+    column :phone
     column :in_reply_to do |s|
       tweet = Tweet.find_by_tweet_id(s.tweet_id)
       if tweet
