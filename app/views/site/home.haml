@@ -35,7 +35,7 @@
           = s.input :first_name, :input_html => { :placeholder => "Joe" }
           = s.input :last_name, :input_html => { :placeholder => "Citizen" }
           = s.input :email, :input_html => { :placeholder => "joecitizen@example.com" }
-          = s.input :phone, :input_html => { :placeholder => "(773) 555-1212" }
+          = s.input :phone, :input_html => { :placeholder => "773-555-1212" }
           = s.input :tweet_id, :as => :hidden, :value => @tweet_id
           %br
           = s.button :submit, ga_trackable('Submission', 'Create', 'Public Submission', :class => "btn-success btn-large", :value => "Submit your report")
