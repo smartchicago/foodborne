@@ -6,22 +6,20 @@ $(function () {
   });
 
   // Geocomplete
-  var chicagoBounds = new google.maps.LatLngBounds(
-    new google.maps.LatLng(41.691747,-87.54692),
-    new google.maps.LatLng(41.991511,-87.806472)
-  );
+  var center = new google.maps.LatLng(41.878114,-87.629798);
 
   $("#submission_restaurant_name").geocomplete({
+    map: ".map_canvas",
     details: "form",
     detailsAttribute: "data-geo",
-    types: ["establishment"],
-    bounds: chicagoBounds,
-    componentRestrictions: {country: "us"}
+    types: ["establishment"]
   });
 
   $("#submission_restaurant_address").geocomplete({
-    types: ["geocode"],
-    bounds: chicagoBounds,
-    componentRestrictions: {country: "us"}
+    types: ["geocode"]
   });
+
+  var map =  $("#submission_restaurant_name").geocomplete("map");
+  map.setCenter(center);
+  map.setZoom(10);
 });
