@@ -18,6 +18,26 @@
 
         %p Once you complete this form, the City of Chicago takes it from there. We use the City’s Open311 system to directly submit your information. We do not maintain a copy of your complaint and have nothing to do with the status of the issue. We’re just some people using technology to help improve communication between Chicago residents and the government that serves them.
 
+        %h2#stats Stats
+
+        %p Foodborne has processed a number of tweets and submissions since March 23rd, 2013. We would like to share a few of those numbers with you.
+
+        %p
+          %strong Total Tweets Machine Classified: #{@counts[:classified]}
+          %br
+          %em These are the total number of "food poison" tweets that FoodBorne Chicago application has classified.
+
+        %p
+          %strong Total Tweets Replied To: #{@counts[:replied]}
+          %br
+          %em These are the total number of machine classified tweets that the human classifier has @replied to on Twitter.
+
+        %p
+          %strong Total Reports Submitted: #{@counts[:reports]}
+          %br
+          %em These are the total number of reports submitted through FoodBorne Chicago.
+
+
         %h2#genesis Genesis
 
         %p
