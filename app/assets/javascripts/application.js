@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.geocomplete
+//= require jquery.fitvids
 //= require_tree .

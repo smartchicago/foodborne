@@ -1,0 +1,40 @@
+- content_for(:page_title, 'Press')
+
+.container
+  #submission.row
+    .span12
+      .press.copy
+        %h2#press Press inquiries
+
+        %p 
+          If you are a member of the press, and would like more information about Foodborne Chicago or an interview, please contact us at <span class="mailme">doneil at cct dot org</span> or (773) 960-6045.
+
+        %h2#press What others have been saying
+
+        %ul.press-links
+          - Press.all.each do |article|
+            %li
+              %h5 
+                = link_to article.title, article.url
+              %p <em>#{article.source}</em>, #{article.published_at.strftime("%B %e, %Y")}
+
+        %h2#press Shareable media
+
+        %p
+          Logo:
+          %br
+          = link_to image_tag("foodborne_chicago_logo.png"), asset_path("foodborne_chicago_logo.png")
+
+        .fitvids
+          Video:
+          %br
+          %iframe{:allowscriptaccess => "always", :allowFullScreen => "true", :frameborder => "0", :height => "315", :src => "http://www.youtube.com/embed/ty_2EYWZUfE", :title => "Foodborne Chicago", :width => "420"}
+        %br
+
+        %p
+          Infographic:
+          %br
+          = link_to image_tag("foodborne_chicago_infographic.jpg", width: 300), asset_path("foodborne_chicago_infographic.jpg")
+
+        %p
+          = link_to "&laquo; Return to the home page".html_safe, "/"
