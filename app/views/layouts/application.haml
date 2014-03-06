@@ -35,7 +35,7 @@
               = image_tag "scc_logo.png", :alt => "Smart Chicago Collaborative"
               
     = yield
-    %script{ :type => 'text/javascript', :src => 'http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places' }
+    %script{ :type => 'text/javascript', :src => '//maps.googleapis.com/maps/api/js?sensor=false&libraries=places' }
     = javascript_include_tag "application"
     - if SETTINGS['GOOGLE_ANALYTICS']
       :javascript
