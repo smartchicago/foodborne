@@ -5,10 +5,12 @@
 body {
   font-family: $font-body;
 
-  input, textarea {
+  input, textarea, button {
     font-family: $font-body;
     max-width: 95%;
   }
+
+  button .icon-lock { margin-right: 5px; vertical-align: baseline; }
 
   abbr[title],
   label { cursor: default; border: none; }

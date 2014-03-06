@@ -39,4 +39,6 @@
           = s.input :phone, :input_html => { :placeholder => "773-555-1212" }
           = s.input :tweet_id, :as => :hidden, :value => @tweet_id
           %br
-          = s.button :submit, ga_trackable('Submission', 'Create', 'Public Submission', :class => "btn-success btn-large", :value => "Submit your report")
+          %button.btn.btn-success.btn-large{ :class => "ga-trackable", :data => { 'tracking-category' => 'Submission', 'tracking-action' => 'Create', 'tracking-label' => 'Public Submission' } }
+            %i.icon-lock.icon-white 
+            Submit your report
