@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.17'
 
 # ActiveAdmin
 gem 'activeadmin'
