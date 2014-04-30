@@ -5,6 +5,12 @@
       Foodborne Chicago - #{content_for?(:page_title) ? yield(:page_title) : "Report incidents of food poisoning in Chicago"}
     %meta{ :charset => 'utf-8' }
     %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
+    %meta{ :name => "twitter:card", :content => "summary" }
+    %meta{ :name => "twitter:site", :content => "@foodbornechi" }
+    %meta{ :name => "twitter:creator", :content => "@foodbornechi" }
+    %meta{ :name => "twitter:title", :content => "Foodborne Chicago" }
+    %meta{ :name => "twitter:description", :content => "If you think you have food poisoning in Chicago, please complete this form. The info will be sent through the Chicago 311 service to the Chicago Department of Public Health so they can take any necessary action including sending a food inspector to that restaurant." }
+    %meta{ :name => "twitter:image", :content => image_url('logo_twitter.png') }
     = stylesheet_link_tag "//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Open+Sans+Condensed:700", :media => "all"
     = stylesheet_link_tag "application", :media => "all"
     /[if lt IE 9]

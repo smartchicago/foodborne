@@ -10,4 +10,8 @@ module ApplicationHelper
       :class => classes
     }.merge(options)
   end
+
+  def image_url(source)
+    URI.join(root_url, image_path(source))
+  end
 end
