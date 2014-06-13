@@ -39,6 +39,9 @@
           = s.input :phone, :input_html => { :placeholder => "773-555-1212" }
           = s.input :tweet_id, :as => :hidden, :value => @tweet_id
           %br
+          %p.privacy
+            Questions about privacy?
+            = link_to "Read our policy.", page_path('privacy'), alt: "Foodborne Chicago's Privacy Policy", target: "_blank"
           %button.btn.btn-success.btn-large{ :class => "ga-trackable", :data => { 'tracking-category' => 'Submission', 'tracking-action' => 'Create', 'tracking-label' => 'Public Submission' } }
             %i.icon-lock.icon-white 
             Submit your report
