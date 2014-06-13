@@ -60,7 +60,12 @@ body {
 
   .subheader { 
     color: #666;
-    @include font-size(18, 18);
+    @include font-size(18, 24);
+
+    span {
+      display: block;
+      @include font-size(16, 20);
+    }
   }
 
   .logo-wrap { margin-bottom: 0; }

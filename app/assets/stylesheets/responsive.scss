@@ -36,7 +36,11 @@
     }
 
     .subheader { 
-      @include font-size(14, 12);
+      @include font-size(14, 20);
+
+      span {
+        @include font-size(12, 12);
+      }
     }
   }
 }
@@ -51,7 +55,9 @@
     }
 
     .subheader { 
-      @include font-size(10, 10);
+      &, span {
+        @include font-size(10, 12);
+      }
     }
   }
 
