@@ -211,4 +211,38 @@ body.thanks {
     clear: both;
     margin: 20px 0;
   }
+
+  ol.steps {
+    list-style-type: none;
+    margin: 0 0 0 40px;
+    padding: 0;
+    counter-reset: li-counter;
+
+    > li{
+      position: relative;
+      margin-bottom: 20px;
+      min-height: 3em;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: -1.33em;
+        width: 1.2em;
+        height: 1.2em;
+         
+        font-size: 3em;
+        line-height: 1em;
+        text-align: center;
+        color: #aaa;
+
+        content: counter(li-counter);
+        counter-increment: li-counter;
+      }
+    }
+  }
+  .steps {
+    li {
+      margin-bottom: 20px;
+    }
+  }
 }

@@ -4,6 +4,15 @@
       .copy
         %p If you think you have food poisoning in Chicago, please complete this form. The info will be sent to the Chicago Department of Public Health so they can take any necessary action.
 
+        %p Here’s more information about what happens next:
+
+        %ol.steps
+          %li We will use the City’s Open311 system to directly submit your information. #{link_to "Here’s more info on the 311 process.", "http://www.cityofchicago.org/content/dam/city/depts/311/general/NewOpen311InformationChart.pdf"}
+
+          %li You will then get an e-mail from #{link_to "CityServices@cityofchicago.org", "mailto: ityServices@cityofchicago.org"} letting you know that the information was received as well as a link to the #{link_to "City’s 311 Service Tracker tool", "http://servicetracker.cityofchicago.org/"}.
+
+          %li There will also be a link in this email (#{link_to "example", "http://servicetracker.cityofchicago.org/requests/13-00210540"}) that goes directly to the City’s Service Tracker website. This is your key to finding out what comes of the service request. If you didn’t get the email, check your Spam folder. Otherwise, contact 311 with questions.
+
         %p Did we @reply you on Twitter? Here’s why.
 
         %p 
