@@ -40,9 +40,12 @@
             Report food poisoning
             %span to the Chicago Department of Public Health
           %p
-            %a.scc{:href => "http://www.smartchicagocollaborative.org/"}
-              A project of the 
-              = image_tag "scc_logo.png", :alt => "Smart Chicago Collaborative"
+            A project of  
+            %a.scc{:href => "http://www.smartchicagocollaborative.org/", title: "Smart Chicago Collaborative"}
+              = image_tag "scc_logo.png", :alt => "Smart Chicago Collaborative logo"
+            and
+            %a.scc{:href => "http://www.cityofchicago.org/city/en/depts/cdph.html", title: "Chicago Department of Public Health"}
+              = image_tag "cdph.png", :alt => "Chicago Department of Public Health logo"
               
     = yield
     %script{ :type => 'text/javascript', :src => '//maps.googleapis.com/maps/api/js?sensor=false&libraries=places' }
