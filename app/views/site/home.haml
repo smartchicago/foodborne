@@ -21,6 +21,10 @@
         %p
           = link_to "Questions? We’ve got answers.", page_path("questions-answers")
 
+        %ul.logos.group
+          %li.city= image_tag('city_seal.png', alt: "City of Chicago Seal")
+          %li.cdph= image_tag('cdph.png', alt: "Chicago Department of Public Health logo")
+
     .span7
       .well
         = simple_form_for @submission, :html => { :class => 'form-horizontal' } do |s|
