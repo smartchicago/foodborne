@@ -12,7 +12,7 @@
         %h2#press What others have been saying
 
         %ul.press-links
-          - Press.all.each do |article|
+          - Press.order('published_at DESC').each do |article|
             %li
               %h5 
                 = link_to article.title, article.url
