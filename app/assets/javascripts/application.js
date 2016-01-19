@@ -15,3 +15,8 @@
 //= require jquery.geocomplete
 //= require jquery.fitvids
 //= require_tree .
+
+$(document).ready(function () {
+  // Make all external links open in a new window
+  $("a[href^=http]").attr("target", "_blank");
+});
