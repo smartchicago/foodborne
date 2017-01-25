@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 private
   def ensure_domain
     if Rails.env.production? and request.host != APP_DOMAIN
-      redirect_to "https://#{APP_DOMAIN}#{request.fullpath}", :status => 301
+      redirect_to "http://#{APP_DOMAIN}#{request.fullpath}", :status => 301
     end
   end
 end

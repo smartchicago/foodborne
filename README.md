@@ -12,7 +12,7 @@ Once you have obtained the necessary keys and credentials, copy the contents of 
 
 ### Production
 
-The live site is hosted on [Heroku](http://heroku.com), and can be found at [https://www.foodbornechicago.org/](https://www.foodbornechicago.org/). All api keys are set and retrieved using [Heroku's config variables](https://devcenter.heroku.com/articles/config-vars).
+The live site is hosted on [Heroku](http://heroku.com), and can be found at [http://www.foodbornechicago.org/](http://www.foodbornechicago.org/). All api keys are set and retrieved using [Heroku's config variables](https://devcenter.heroku.com/articles/config-vars).
 
 ## Fetching Tweets
 
